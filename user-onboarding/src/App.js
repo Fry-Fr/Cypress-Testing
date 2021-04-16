@@ -58,9 +58,9 @@ const postUserList = (newUserList) => {
 
 const submitForm = () => {
   const newUserList = {
-    name: formData.name,
-    email: formData.email,
-    password: formData.password,
+    name: formData.name.trim(),
+    email: formData.email.trim(),
+    password: formData.password.trim(),
     termsOfService: formData.termsOfService
   }
   postUserList(newUserList)

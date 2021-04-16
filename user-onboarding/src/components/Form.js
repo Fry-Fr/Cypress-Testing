@@ -32,7 +32,7 @@ export default function Form(props) {
                 <label>Terms Of Service:
                     <input checked={formData.termsOfService} name="termsOfService" type="checkbox" onChange={onChange}/>
                 </label>
-                <button disabled={disabled}>SUBMIT</button>
+                <button id="subbutt" disabled={disabled}>SUBMIT</button>
 
             </form>
         </div>
