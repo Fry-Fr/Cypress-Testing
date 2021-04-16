@@ -24,7 +24,7 @@ const [ disabled, setDisabled ] = useState(initialDisabled)
 const updateForm = (name, value) => {
   yup
   .reach(schema, name)
-  .isValid(value)
+  .validate(value)
   .then( res => {
     setFormErrors({
       ...formErrors,
@@ -75,7 +75,7 @@ useEffect( () => {
 
   return (
     <div className="App">
-      <Form formData={formData} update={updateForm} submit={submitForm} disabled={disabled}/>
+      <Form error={formErrors} formData={formData} update={updateForm} submit={submitForm} disabled={disabled}/>
       {userList ? <Friends users={userList}/> : undefined}
     </div>
   )

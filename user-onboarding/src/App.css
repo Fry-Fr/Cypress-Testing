@@ -30,3 +30,6 @@ div.fr-wrapper {
   flex-flow: column;
   align-items: center;
 }
+#error {
+  color: red;
+}
